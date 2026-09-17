@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Médium Voyant DJOMIHON - Consultations spirituelles et accompagnement personnalisé.">
+  <meta name="theme-color" content="#08060f">
+  <title>Médium Voyant DJOMIHON | Consultation & Guidance</title>
+
+  <style>
+    :root{
+      --bg:#08060f;
+      --bg2:#100b1d;
+      --card:#151021;
+      --gold:#d6b56a;
+      --gold2:#f2d58b;
+      --white:#f7f4ee;
+      --muted:#b7b0c3;
+      --border:rgba(214,181,106,.22);
+      --shadow:0 20px 60px rgba(0,0,0,.35);
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+
+    body{
+      font-family:Georgia,"Times New Roman",serif;
+      background:
+        radial-gradient(circle at 20% 10%,rgba(111,69,150,.18),transparent 30%),
+        radial-gradient(circle at 80% 30%,rgba(214,181,106,.08),transparent 28%),
+        var(--bg);
+      color:var(--white);
+      line-height:1.7;
+    }
+
+    a{text-decoration:none;color:inherit}
+
+    .container{
+      width:min(1120px,92%);
+      margin:auto;
+    }
+
+    /* NAVBAR */
+    header{
+      position:fixed;
+      top:0;
+      width:100%;
+      z-index:1000;
+      background:rgba(8,6,15,.86);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--border);
+    }
+
+    nav{
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:25px;
+    }
+
+    .logo{
+      font-size:1.15rem;
+      letter-spacing:1px;
+      color:var(--gold2);
+      font-weight:bold;
+    }
+
+    .logo span{
+      display:block;
+      color:#fff;
+      font-size:.75rem;
+      letter-spacing:3px;
+      font-weight:normal;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:25px;
+      align-items:center;
+    }
+
+    .nav-links a{
+      color:#ddd6e4;
+      font-size:.9rem;
+      transition:.3s;
+    }
+
+    .nav-links a:hover{color:var(--gold2)}
+
+    .nav-btn{
+      padding:10px 17px;
+      border:1px solid var(--gold);
+      color:var(--gold2)!important;
+      border-radius:30px;
+    }
+
+    .menu{
+      display:none;
+      font-size:1.7rem;
+      cursor:pointer;
+    }
+
+    /* HERO */
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      padding:130px 0 80px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero::before{
+      content:"✦";
+      position:absolute;
+      right:9%;
+      top:20%;
+      font-size:180px;
+      color:rgba(214,181,106,.07);
+    }
+
+    .hero-content{
+      max-width:780px;
+      text-align:center;
+      margin:auto;
+    }
+
+    .eyebrow{
+      color:var(--gold2);
+      letter-spacing:4px;
+      text-transform:uppercase;
+      font-size:.75rem;
+      margin-bottom:20px;
+    }
+
+    h1{
+      font-size:clamp(2.5rem,7vw,5.2rem);
+      line-height:1.05;
+      margin-bottom:25px;
+    }
+
+    h1 span{
+      color:var(--gold2);
+    }
+
+    .hero p{
+      color:var(--muted);
+      max-width:680px;
+      margin:0 auto 35px;
+      font-size:1.08rem;
+    }
+
+    .buttons{
+      display:flex;
+      justify-content:center;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 24px;
+      border-radius:35px;
+      border:1px solid var(--gold);
+      transition:.3s;
+      cursor:pointer;
+      font-family:inherit;
+      font-size:.95rem;
+    }
+
+    .btn-primary{
+      background:var(--gold);
+      color:#100c13;
+      font-weight:bold;
+    }
+
+    .btn-primary:hover{
+      background:var(--gold2);
+      transform:translateY(-2px);
+    }
+
+    .btn-outline{
+      color:var(--gold2);
+      background:transparent;
+    }
+
+    .btn-outline:hover{
+      background:rgba(214,181,106,.1);
+    }
+
+    /* SECTIONS */
+    section{
+      padding:95px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .section-title small{
+      color:var(--gold2);
+      text-transform:uppercase;
+      letter-spacing:3px;
+    }
+
+    .section-title h2{
+      font-size:clamp(2rem,5vw,3.2rem);
+      margin:10px 0;
+    }
+
+    .section-title p{
+      max-width:650px;
+      margin:auto;
+      color:var(--muted);
+    }
+
+    /* SERVICES */
+    .services{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+
+    .card{
+      background:linear-gradient(145deg,rgba(255,255,255,.04),rgba(255,255,255,.015));
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:30px;
+      box-shadow:var(--shadow);
+      transition:.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-7px);
+      border-color:rgba(214,181,106,.55);
+    }
+
+    .icon{
+      width:55px;
+      height:55px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      background:rgba(214,181,106,.1);
+      color:var(--gold2);
+      font-size:1.5rem;
+      margin-bottom:20px;
+    }
+
+    .card h3{
+      margin-bottom:10px;
+      font-size:1.3rem;
+    }
+
+    .card p{
+      color:var(--muted);
+      font-size:.94rem;
+      margin-bottom:20px;
+    }
+
+    .price{
+      color:var(--gold2);
+      font-weight:bold;
+      font-size:1.05rem;
+    }
+
+    /* ABOUT */
+    .about{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
+      align-items:center;
+    }
+
+    .about-box{
+      min-height:420px;
+      border-radius:25px;
+      border:1px solid var(--border);
+      background:
+        radial-gradient(circle at center,rgba(214,181,106,.12),transparent 45%),
+        linear-gradient(145deg,#171021,#0d0915);
+      display:grid;
+      place-items:center;
+      text-align:center;
+      padding:30px;
+    }
+
+    .symbol{
+      font-size:7rem;
+      color:var(--gold2);
+      text-shadow:0 0 40px rgba(214,181,106,.25);
+    }
+
+    .about h2{
+      font-size:2.6rem;
+      margin:10px 0 20px;
+    }
+
+    .about p{
+      color:var(--muted);
+      margin-bottom:18px;
+    }
+
+    .signature{
+      color:var(--gold2);
+      font-style:italic;
+      font-size:1.2rem;
+    }
+
+    /* PROCESS */
+    .process{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+
+    .step{
+      text-align:center;
+      padding:25px 15px;
+    }
+
+    .number{
+      width:50px;
+      height:50px;
+      margin:0 auto 15px;
+      border:1px solid var(--gold);
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      color:var(--gold2);
+    }
+
+    .step p{color:var(--muted);font-size:.9rem}
+
+    /* RESERVATION */
+    .booking{
+      background:linear-gradient(145deg,#130d1e,#0c0812);
+      border:1px solid var(--border);
+      border-radius:28px;
+      padding:45px;
+      max-width:850px;
+      margin:auto;
+    }
+
+    form{
+      display:grid;
+      gap:17px;
+    }
+
+    .form-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:17px;
+    }
+
+    label{
+      color:#ddd5e5;
+      font-size:.85rem;
+      display:block;
+      margin-bottom:6px;
+    }
+
+    input,select,textarea{
+      width:100%;
+      padding:14px 15px;
+      background:#0b0811;
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:10px;
+      color:white;
+      outline:none;
+      font-family:inherit;
+    }
+
+    textarea{min-height:130px;resize:vertical}
+
+    input:focus,select:focus,textarea:focus{
+      border-color:var(--gold);
+    }
+
+    /* TESTIMONIALS */
+    .testimonials{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .testimonial{
+      padding:28px;
+      border:1px solid var(--border);
+      border-radius:20px;
+      background:rgba(255,255,255,.025);
+    }
+
+    .stars{
+      color:var(--gold2);
+      margin-bottom:15px;
+    }
+
+    .testimonial p{
+      color:#d0c9d7;
+      font-style:italic;
+    }
+
+    .testimonial strong{
+      display:block;
+      margin-top:15px;
+      color:var(--gold2);
+    }
+
+    /* FAQ */
+    .faq{
+      max-width:800px;
+      margin:auto;
+    }
+
+    details{
+      background:rgba(255,255,255,.025);
+      border:1px solid var(--border);
+      border-radius:12px;
+      margin-bottom:12px;
+      padding:18px 20px;
+    }
+
+    summary{
+      cursor:pointer;
+      color:var(--gold2);
+      font-weight:bold;
+    }
+
+    details p{
+      color:var(--muted);
+      margin-top:12px;
+    }
+
+    /* CONTACT */
+    .contact{
+      text-align:center;
+    }
+
+    .contact-box{
+      max-width:700px;
+      margin:auto;
+      padding:40px;
+      border:1px solid var(--border);
+      border-radius:25px;
+      background:rgba(255,255,255,.025);
+    }
+
+    .contact-item{
+      margin:18px 0;
+      color:var(--muted);
+    }
+
+    .contact-item strong{
+      color:var(--gold2);
+    }
+
+    /* FOOTER */
+    footer{
+      border-top:1px solid var(--border);
+      padding:35px 0;
+      text-align:center;
+      color:#8f879b;
+      font-size:.85rem;
+    }
+
+    /* WHATSAPP */
+    .whatsapp{
+      position:fixed;
+      right:22px;
+      bottom:22px;
+      width:58px;
+      height:58px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:#25D366;
+      color:white;
+      font-size:1.6rem;
+      z-index:999;
+      box-shadow:0 8px 25px rgba(0,0,0,.35);
+    }
+
+    /* MOBILE */
+    @media(max-width:850px){
+      .nav-links{
+        display:none;
+        position:absolute;
+        top:76px;
+        left:0;
+        right:0;
+        background:#090711;
+        flex-direction:column;
+        padding:25px;
+        border-bottom:1px solid var(--border);
+      }
+
+      .nav-links.active{display:flex}
+      .menu{display:block}
+
+      .services,
+      .testimonials{
+        grid-template-columns:1fr;
+      }
+
+      .about{
+        grid-template-columns:1fr;
+      }
+
+      .process{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+
+    @media(max-width:550px){
+      section{padding:70px 0}
+      .form-grid{grid-template-columns:1fr}
+      .booking{padding:25px 18px}
+      .process{grid-template-columns:1fr}
+      h1{font-size:2.7rem}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a href="#accueil" class="logo">
+        DJOMIHON
+        <span>MÉDIUM VOYANT</span>
+      </a>
+
+      <div class="menu" onclick="toggleMenu()">☰</div>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#accueil">Accueil</a>
+        <a href="#services">Consultations</a>
+        <a href="#apropos">À propos</a>
+        <a href="#reservation">Réserver</a>
+        <a href="#contact" class="nav-btn">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="accueil">
+    <div class="container">
+      <div class="hero-content">
+
+        <div class="eyebrow">Voyance • Guidance • Consultation</div>
+
+        <h1>
+          Médium Voyant<br>
+          <span>DJOMIHON</span>
+        </h1>
+
+        <p>
+          Un espace privé pour vous permettre de poser vos questions,
+          rechercher des éclaircissements et bénéficier d'une consultation
+          personnalisée dans un cadre confidentiel.
+        </p>
+
+        <div class="buttons">
+          <a href="#reservation" class="btn btn-primary">
+            Réserver une consultation
+          </a>
+
+          <a
+            href="https://wa.me/2290169838270"
+            target="_blank"
+            class="btn btn-outline">
+            WhatsApp
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+
+      <div class="section-title">
+        <small>Mes consultations</small>
+        <h2>Choisissez votre consultation</h2>
+        <p>
+          Chaque consultation est réalisée dans un cadre privé et confidentiel.
+        </p>
+      </div>
+
+      <div class="services">
+
+        <div class="card">
+          <div class="icon">♡</div>
+          <h3>Amour & Relations</h3>
+          <p>
+            Consultation autour des questions sentimentales,
+            relationnelles et affectives.
+          </p>
+          <div class="price">Tarif sur demande</div>
+        </div>
+
+        <div class="card">
+          <div class="icon">✦</div>
+          <h3>Voyance générale</h3>
+          <p>
+            Une consultation pour aborder les principales
+            préoccupations qui vous amènent aujourd'hui.
+          </p>
+          <div class="price">Tarif sur demande</div>
+        </div>
+
+        <div class="card">
+          <div class="icon">☾</div>
+          <h3>Guidance personnelle</h3>
+          <p>
+            Un échange consacré à vos interrogations personnelles
+            et à votre cheminement.
+          </p>
+          <div class="price">Tarif sur demande</div>
+        </div>
+
+        <div class="card">
+          <div class="icon">◇</div>
+          <h3>Consultation privée</h3>
+          <p>
+            Un échange individuel et confidentiel adapté
+            à votre situation.
+          </p>
+          <div class="price">Tarif sur demande</div>
+        </div>
+
+        <div class="card">
+          <div class="icon">☀</div>
+          <h3>Questions précises</h3>
+          <p>
+            Vous avez une question particulière ? Présentez-la
+            lors de votre demande de consultation.
+          </p>
+          <div class="price">Tarif sur demande</div>
+        </div>
+
+        <div class="card">
+          <div class="icon">∞</div>
+          <h3>Consultation personnalisée</h3>
+          <p>
+            Une formule construite selon votre demande et
+            la nature de votre consultation.
+          </p>
+          <div class="price">Sur rendez-vous</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="apropos">
+    <div class="container">
+
+      <div class="about">
+
+        <div class="about-box">
+          <div>
+            <div class="symbol">✦</div>
+            <h3>Médium Voyant DJOMIHON</h3>
+            <p>Consultations privées et confidentielles</p>
+          </div>
+        </div>
+
+        <div>
+          <small class="eyebrow">À propos</small>
+          <h2>Un espace dédié à votre recherche de réponses</h2>
+
+          <p>
+            Bienvenue dans l'univers de Médium Voyant DJOMIHON.
+            Le site vous permet de découvrir les consultations proposées
+            et de demander un rendez-vous de manière simple.
+          </p>
+
+          <p>
+            Chaque échange est traité avec discrétion et confidentialité.
+            Vous êtes libre d'expliquer votre situation et de poser
+            les questions qui vous préoccupent.
+          </p>
+
+          <div class="signature">
+            — Médium Voyant DJOMIHON
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section>
+    <div class="container">
+
+      <div class="section-title">
+        <small>Comment ça marche ?</small>
+        <h2>Votre consultation en 4 étapes</h2>
+      </div>
+
+      <div class="process">
+
+        <div class="step">
+          <div class="number">1</div>
+          <h3>Choisissez</h3>
+          <p>Sélectionnez le type de consultation qui correspond à votre demande.</p>
+        </div>
+
+        <div class="step">
+          <div class="number">2</div>
+          <h3>Réservez</h3>
+          <p>Remplissez le formulaire avec vos coordonnées et votre demande.</p>
+        </div>
+
+        <div class="step">
+          <div class="number">3</div>
+          <h3>Confirmation</h3>
+          <p>Votre demande est transmise par WhatsApp pour organiser le rendez-vous.</p>
+        </div>
+
+        <div class="step">
+          <div class="number">4</div>
+          <h3>Consultation</h3>
+          <p>Votre échange se déroule selon les modalités convenues.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section id="reservation">
+    <div class="container">
+
+      <div class="section-title">
+        <small>Rendez-vous</small>
+        <h2>Demander une consultation</h2>
+        <p>
+          Remplissez les informations ci-dessous. Votre demande sera préparée
+          automatiquement pour WhatsApp.
+        </p>
+      </div>
+
+      <div class="booking">
+
+        <form id="bookingForm">
+
+          <div class="form-grid">
+
+            <div>
+              <label for="name">Votre nom</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Votre nom"
+                required>
+            </div>
+
+            <div>
+              <label for="phone">Votre WhatsApp</label>
+              <input
+                type="tel"
+                id="phone"
+                placeholder="+229..."
+                required>
+            </div>
+
+          </div>
+
+          <div class="form-grid">
+
+            <div>
+              <label for="service">Type de consultation</label>
+
+              <select id="service" required>
+                <option value="">Choisir une consultation</option>
+                <option>Amour & Relations</option>
+                <option>Voyance générale</option>
+                <option>Guidance personnelle</option>
+                <option>Consultation privée</option>
+                <option>Questions précises</option>
+                <option>Consultation personnalisée</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="date">Date souhaitée</label>
+              <input type="date" id="date" required>
+            </div>
+
+          </div>
+
+          <div>
+            <label for="message">Votre demande</label>
+
+            <textarea
+              id="message"
+              placeholder="Expliquez brièvement votre demande..."
+              required></textarea>
+          </div>
+
+          <button class="btn btn-primary" type="submit">
+            Envoyer ma demande sur WhatsApp
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section>
+    <div class="container">
+
+      <div class="section-title">
+        <small>Témoignages</small>
+        <h2>Ils parlent de leur expérience</h2>
+        <p>
+          Cette section pourra accueillir les témoignages réels de vos clients.
+        </p>
+      </div>
+
+      <div class="testimonials">
+
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>
+            « Témoignage client à remplacer par un véritable retour
+            d'expérience. »
+          </p>
+          <strong>— Client(e)</strong>
+        </div>
+
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>
+            « Témoignage client à remplacer par un véritable retour
+            d'expérience. »
+          </p>
+          <strong>— Client(e)</strong>
+        </div>
+
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>
+            « Témoignage client à remplacer par un véritable retour
+            d'expérience. »
+          </p>
+          <strong>— Client(e)</strong>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <div class="container">
+
+      <div class="section-title">
+        <small>FAQ</small>
+        <h2>Questions fréquentes</h2>
+      </div>
+
+      <div class="faq">
+
+        <details>
+          <summary>Comment prendre rendez-vous ?</summary>
+          <p>
+            Remplissez le formulaire de réservation. Votre demande sera
+            préparée et vous pourrez l'envoyer directement sur WhatsApp.
+          </p>
+        </details>
+
+        <details>
+          <summary>Les consultations sont-elles confidentielles ?</summary>
+          <p>
+            Les échanges doivent être traités de manière privée et
+            confidentielle.
+          </p>
+        </details>
+
+        <details>
+          <summary>Comment se déroule une consultation à distance ?</summary>
+          <p>
+            Les modalités de consultation sont convenues directement avec
+            le médium lors de la prise de rendez-vous.
+          </p>
+        </details>
+
+        <details>
+          <summary>Quels sont les tarifs ?</summary>
+          <p>
+            Les tarifs peuvent être communiqués lors de la prise de contact.
+            Ils pourront également être affichés directement sur le site
+            lorsque les formules seront définitivement établies.
+          </p>
+        </details>
+
+        <details>
+          <summary>La voyance garantit-elle un résultat ?</summary>
+          <p>
+            Une consultation de voyance ou de guidance ne constitue pas une
+            garantie concernant des événements futurs. Les décisions
+            personnelles restent sous la responsabilité du client.
+          </p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+
+      <div class="section-title">
+        <small>Contact</small>
+        <h2>Parlons de votre consultation</h2>
+      </div>
+
+      <div class="contact-box">
+
+        <div class="contact-item">
+          <strong>Nom</strong><br>
+          Médium Voyant DJOMIHON
+        </div>
+
+        <div class="contact-item">
+          <strong>WhatsApp</strong><br>
+          +229 01 69 83 82 70
+        </div>
+
+        <div class="contact-item">
+          <strong>E-mail</strong><br>
+          samajestedjomihon@gmail.com
+        </div>
+
+        <div class="buttons">
+          <a
+            href="https://wa.me/2290169838270"
+            target="_blank"
+            class="btn btn-primary">
+            Contacter sur WhatsApp
+          </a>
+
+          <a
+            href="mailto:samajestedjomihon@gmail.com"
+            class="btn btn-outline">
+            Envoyer un e-mail
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    © <span id="year"></span> Médium Voyant DJOMIHON.
+    Tous droits réservés.
+  </div>
+</footer>
+
+<a
+  class="whatsapp"
+  href="https://wa.me/2290169838270"
+  target="_blank"
+  aria-label="Contacter DJOMIHON sur WhatsApp">
+  ☎
+</a>
+
+<script>
+
+  /* MENU MOBILE */
+  function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("active");
+  }
+
+  /* ANNÉE */
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  /* RESERVATION WHATSAPP */
+  document.getElementById("bookingForm").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const service = document.getElementById("service").value;
+    const date = document.getElementById("date").value;
+    const message = document.getElementById("message").value;
+
+    const text =
+`Bonjour Médium Voyant DJOMIHON,
+
+Je souhaite demander une consultation.
+
+Nom : ${name}
+Mon WhatsApp : ${phone}
+Consultation : ${service}
+Date souhaitée : ${date}
+
+Ma demande :
+${message}
+
+Merci.`;
+
+    const whatsappNumber = "2290169838270";
+
+    const url =
+      "https://wa.me/" +
+      whatsappNumber +
+      "?text=" +
+      encodeURIComponent(text);
+
+    window.open(url, "_blank");
+
+  });
+
+</script>
+
+</body>
+</html>un 
