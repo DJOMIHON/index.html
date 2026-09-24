@@ -1,1589 +1,1107 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description"
-content="Médium Voyant DJOMIHON — Voyance, guidance intuitive et consultations spirituelles dans un cadre discret et confidentiel.">
+<meta name="description" content="Médium Voyant DJOMIHON — consultations spirituelles, sentimentales, professionnelles et guidance personnelle dans un cadre discret.">
 
 <title>Médium Voyant DJOMIHON — Voyance & Guidance</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* =====================================================
-   VARIABLES
-===================================================== */
-
 :root{
-    --night:#031127;
-    --night2:#061936;
-    --night3:#0b2344;
-
-    --gold:#caa866;
-    --gold-light:#e2c889;
-
-    --white:#f8f6ef;
-    --text:#e6eaf0;
-    --muted:#aeb9c9;
-
-    --line:rgba(255,255,255,.12);
-
-    --radius:20px;
-
-    --shadow:0 25px 70px rgba(0,0,0,.40);
+--night:#031127;
+--night2:#061832;
+--night3:#0b2344;
+--gold:#caa866;
+--gold2:#e2c889;
+--white:#f8f6ef;
+--text:#e7ebf1;
+--muted:#aeb9c9;
+--line:rgba(255,255,255,.12);
 }
 
-
-/* =====================================================
-   RESET
-===================================================== */
-
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
 html{
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-    margin:0;
-    background:var(--night);
-    color:var(--white);
-    font-family:"Inter",Arial,sans-serif;
-    line-height:1.7;
-    overflow-x:hidden;
+background:var(--night);
+color:var(--white);
+font-family:Inter,Arial,sans-serif;
+line-height:1.7;
+overflow-x:hidden;
 }
 
 a{
-    color:inherit;
-    text-decoration:none;
+color:inherit;
+text-decoration:none;
 }
 
 img{
-    max-width:100%;
-    display:block;
+display:block;
+max-width:100%;
 }
 
 .container{
-    width:min(1180px,92%);
-    margin:auto;
+width:min(1180px,92%);
+margin:auto;
 }
 
 .section{
-    position:relative;
-    padding:105px 0;
-    overflow:hidden;
+position:relative;
+padding:100px 0;
+overflow:hidden;
 }
 
-
-/* =====================================================
-   TYPOGRAPHIE
-===================================================== */
-
-h1,
-h2,
-h3{
-    font-family:"Cormorant Garamond",Georgia,serif;
-    font-weight:600;
-    line-height:1.05;
+h1,h2,h3{
+font-family:"Cormorant Garamond",Georgia,serif;
+line-height:1.05;
+font-weight:600;
 }
 
 h1{
-    font-size:clamp(4rem,9vw,7.5rem);
+font-size:clamp(4rem,9vw,7.5rem);
+letter-spacing:-.04em;
 }
 
 h2{
-    font-size:clamp(2.7rem,5vw,4.4rem);
+font-size:clamp(2.7rem,5vw,4.5rem);
 }
 
 h3{
-    font-size:2rem;
+font-size:2rem;
 }
 
 p{
-    color:var(--muted);
+color:var(--muted);
 }
 
 .eyebrow{
-    margin-bottom:16px;
-
-    color:var(--gold-light);
-
-    font-size:.70rem;
-    font-weight:700;
-
-    letter-spacing:.25em;
-    text-transform:uppercase;
+color:var(--gold2);
+font-size:.7rem;
+font-weight:700;
+letter-spacing:.25em;
+text-transform:uppercase;
+margin-bottom:15px;
 }
 
-
-/* =====================================================
-   BOUTONS
-===================================================== */
-
 .btn{
-    display:inline-flex;
-
-    align-items:center;
-    justify-content:center;
-
-    min-height:52px;
-
-    padding:13px 25px;
-
-    border-radius:999px;
-
-    border:1px solid rgba(202,168,102,.75);
-
-    font-size:.86rem;
-    font-weight:700;
-
-    transition:.25s ease;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-height:52px;
+padding:13px 25px;
+border-radius:999px;
+border:1px solid rgba(202,168,102,.8);
+font-size:.84rem;
+font-weight:700;
+transition:.25s;
 }
 
 .btn:hover{
-    transform:translateY(-3px);
+transform:translateY(-3px);
 }
 
 .btn-gold{
-    background:var(--gold);
-    color:#061329;
+background:var(--gold);
+color:#061329;
 }
 
 .btn-outline{
-    background:rgba(255,255,255,.04);
-    color:white;
-
-    backdrop-filter:blur(12px);
-}
-
-.btn-whatsapp::before{
-    content:"◉";
-    margin-right:8px;
+background:rgba(255,255,255,.04);
+backdrop-filter:blur(10px);
 }
 
 
-/* =====================================================
-   HEADER
-===================================================== */
+/* HEADER */
 
 header{
-    position:fixed;
-
-    top:0;
-    left:0;
-    right:0;
-
-    z-index:1000;
-
-    background:
-        linear-gradient(
-            180deg,
-            rgba(2,9,24,.97),
-            rgba(2,9,24,.70),
-            transparent
-        );
-
-    backdrop-filter:blur(8px);
+position:fixed;
+z-index:1000;
+top:0;
+left:0;
+right:0;
+background:linear-gradient(
+180deg,
+rgba(2,9,24,.98),
+rgba(2,9,24,.7),
+transparent
+);
+backdrop-filter:blur(8px);
 }
 
 .nav{
-    height:82px;
-
-    display:flex;
-
-    align-items:center;
-    justify-content:space-between;
-
-    gap:20px;
+height:82px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
 }
 
 .logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
-
-    font-weight:700;
-    letter-spacing:.08em;
+display:flex;
+align-items:center;
+gap:11px;
 }
 
 .logo-circle{
-    width:44px;
-    height:44px;
-
-    display:grid;
-    place-items:center;
-
-    border:1px solid var(--gold);
-
-    border-radius:50%;
-
-    color:var(--gold);
-
-    font-family:"Cormorant Garamond",serif;
-    font-size:1.55rem;
+width:44px;
+height:44px;
+border:1px solid var(--gold);
+border-radius:50%;
+display:grid;
+place-items:center;
+color:var(--gold);
+font:1.55rem "Cormorant Garamond",serif;
 }
 
 .logo-text small{
-    display:block;
-
-    color:var(--gold);
-
-    font-size:.57rem;
-
-    letter-spacing:.22em;
+display:block;
+color:var(--gold);
+font-size:.55rem;
+letter-spacing:.22em;
 }
 
 .logo-text strong{
-    display:block;
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:1.45rem;
-
-    line-height:.9;
+display:block;
+font:1.45rem/1 "Cormorant Garamond",serif;
 }
 
 .nav-links{
-    display:flex;
-
-    align-items:center;
-
-    gap:25px;
-
-    font-size:.84rem;
-}
-
-.nav-links a{
-    color:#e7ebf1;
-
-    transition:.2s;
+display:flex;
+gap:24px;
+align-items:center;
+font-size:.83rem;
 }
 
 .nav-links a:hover{
-    color:var(--gold-light);
+color:var(--gold2);
 }
 
 .nav-cta{
-    min-height:42px;
-    padding:10px 18px;
-
-    font-size:.77rem;
+min-height:42px;
+padding:10px 18px;
+font-size:.75rem;
 }
 
 .menu{
-    display:none;
-
-    border:none;
-    background:none;
-
-    color:white;
-
-    font-size:1.7rem;
-
-    cursor:pointer;
+display:none;
+background:none;
+border:0;
+color:white;
+font-size:1.7rem;
 }
 
 
-/* =====================================================
-   HERO
-===================================================== */
+/* HERO */
 
 .hero{
-    min-height:100svh;
-
-    position:relative;
-
-    display:flex;
-    align-items:center;
-
-    background:var(--night);
-
-    overflow:hidden;
+min-height:100svh;
+position:relative;
+display:flex;
+align-items:center;
+background:var(--night);
+overflow:hidden;
 }
 
-
-/*
-   IMAGE PRINCIPALE
-   L'image carrée est automatiquement adaptée
-   à toute la largeur de l'écran.
-*/
+.hero-image,
+.about-image,
+.visual-image,
+.cta-image{
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:cover;
+}
 
 .hero-image{
-    position:absolute;
-
-    inset:0;
-
-    width:100%;
-    height:100%;
-
-    object-fit:cover;
-
-    object-position:center;
-
-    opacity:.72;
-
-    z-index:0;
+opacity:.68;
+object-position:center;
 }
-
-
-/*
-   VOILE BLEU NUIT
-*/
 
 .hero-overlay{
-    position:absolute;
-
-    inset:0;
-
-    z-index:1;
-
-    background:
-
-        linear-gradient(
-            90deg,
-            rgba(2,10,27,.96) 0%,
-            rgba(2,10,27,.84) 38%,
-            rgba(2,10,27,.48) 72%,
-            rgba(2,10,27,.65) 100%
-        ),
-
-        linear-gradient(
-            180deg,
-            rgba(2,9,24,.20),
-            rgba(2,9,24,.80)
-        );
+position:absolute;
+inset:0;
+background:
+linear-gradient(
+90deg,
+rgba(2,10,27,.96),
+rgba(2,10,27,.78) 42%,
+rgba(2,10,27,.42) 75%,
+rgba(2,10,27,.65)
+),
+linear-gradient(
+180deg,
+rgba(2,9,24,.2),
+rgba(2,9,24,.82)
+);
 }
-
 
 .hero-content{
-    position:relative;
-
-    z-index:2;
-
-    max-width:760px;
-
-    padding:150px 0 90px;
-}
-
-.hero h1{
-    letter-spacing:-.045em;
+position:relative;
+z-index:2;
+max-width:760px;
+padding:150px 0 90px;
 }
 
 .hero h1 span{
-    display:block;
-
-    color:var(--gold-light);
-
-    font-style:italic;
+display:block;
+color:var(--gold2);
+font-style:italic;
 }
 
 .hero-description{
-    max-width:650px;
-
-    margin:25px 0 32px;
-
-    color:#e1e6ed;
-
-    font-size:1.04rem;
+max-width:650px;
+margin:25px 0 32px;
+color:#e1e6ed;
+font-size:1.03rem;
 }
 
 .hero-buttons{
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:12px;
+display:flex;
+flex-wrap:wrap;
+gap:12px;
 }
 
 .hero-info{
-    margin-top:23px;
-
-    color:#aeb8c8;
-
-    font-size:.76rem;
+margin-top:22px;
+font-size:.75rem;
+color:#b2bdcc;
 }
 
 
-/* =====================================================
-   BANDEAU CONFIANCE
-===================================================== */
+/* TRUST */
 
 .trust{
-    position:relative;
-
-    background:#061731;
-
-    border-top:1px solid var(--line);
-    border-bottom:1px solid var(--line);
+background:#061731;
+border-block:1px solid var(--line);
 }
 
 .trust-grid{
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
+display:grid;
+grid-template-columns:repeat(4,1fr);
 }
 
 .trust-item{
-    padding:25px 18px;
-
-    text-align:center;
-
-    border-right:1px solid var(--line);
+text-align:center;
+padding:23px 12px;
+border-right:1px solid var(--line);
 }
 
 .trust-item:last-child{
-    border-right:none;
+border:0;
 }
 
 .trust-item strong{
-    display:block;
-
-    color:white;
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:1.4rem;
+display:block;
+font:1.35rem "Cormorant Garamond",serif;
 }
 
 .trust-item span{
-    color:var(--gold);
-
-    font-size:.67rem;
-
-    letter-spacing:.13em;
-
-    text-transform:uppercase;
+font-size:.65rem;
+color:var(--gold);
+letter-spacing:.13em;
+text-transform:uppercase;
 }
 
 
-/* =====================================================
-   INTRO
-===================================================== */
+/* INTRO */
 
 .intro{
-    background:var(--night2);
+background:var(--night2);
 }
 
-.intro-grid{
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:80px;
-
-    align-items:center;
+.intro-grid,
+.about-grid,
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:75px;
+align-items:center;
 }
 
 .intro-text{
-    max-width:630px;
-
-    font-size:1rem;
+max-width:650px;
 }
 
-.intro-text p + p{
-    margin-top:20px;
+.intro-text p+p{
+margin-top:18px;
 }
 
 
-/* =====================================================
-   ABOUT
-===================================================== */
+/* ABOUT */
 
 .about{
-    background:#061832;
+background:#061832;
 }
 
 .about-image{
-    position:absolute;
-
-    inset:0;
-
-    width:100%;
-    height:100%;
-
-    object-fit:cover;
-
-    opacity:.20;
-
-    z-index:0;
+opacity:.2;
 }
 
 .about-overlay{
-    position:absolute;
-
-    inset:0;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(4,15,36,.98),
-            rgba(4,15,36,.80),
-            rgba(4,15,36,.62)
-        );
-
-    z-index:1;
+position:absolute;
+inset:0;
+background:
+linear-gradient(
+90deg,
+rgba(4,15,36,.98),
+rgba(4,15,36,.8),
+rgba(4,15,36,.58)
+);
 }
 
 .about-container{
-    position:relative;
-
-    z-index:2;
-}
-
-.about-grid{
-    display:grid;
-
-    grid-template-columns:1.15fr .85fr;
-
-    gap:80px;
-
-    align-items:center;
+position:relative;
+z-index:2;
 }
 
 .about-text p{
-    margin-top:20px;
-
-    max-width:700px;
+margin-top:18px;
 }
 
 .signature{
-    margin-top:30px;
-
-    color:var(--gold-light);
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:2rem;
-
-    font-style:italic;
+margin-top:25px;
+color:var(--gold2);
+font:italic 2rem "Cormorant Garamond",serif;
 }
 
 .about-quote{
-    padding-left:30px;
-
-    border-left:1px solid var(--gold);
-
-    color:white;
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:2.1rem;
-
-    font-style:italic;
+padding-left:30px;
+border-left:1px solid var(--gold);
+font:italic 2.1rem "Cormorant Garamond",serif;
 }
 
 
-/* =====================================================
-   CONSULTATIONS
-===================================================== */
+/* CONSULTATIONS */
 
 .consultations{
-    background:var(--night2);
+background:var(--night2);
 }
 
 .section-heading{
-    max-width:760px;
-
-    margin-bottom:50px;
+max-width:800px;
+margin-bottom:45px;
 }
 
 .section-heading p{
-    margin-top:18px;
+margin-top:18px;
 }
 
-.services-grid{
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:17px;
+.service-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
 }
 
 .service{
-    position:relative;
-
-    min-height:360px;
-
-    overflow:hidden;
-
-    border:1px solid var(--line);
-
-    border-radius:18px;
-
-    background:#07172f;
-
-    box-shadow:var(--shadow);
+position:relative;
+min-height:410px;
+overflow:hidden;
+border:1px solid var(--line);
+border-radius:20px;
+background:#07172f;
 }
 
 .service-image{
-    position:absolute;
-
-    inset:0;
-
-    width:100%;
-    height:100%;
-
-    object-fit:cover;
-
-    opacity:.38;
-
-    transition:.5s;
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:cover;
+opacity:.42;
+transition:.5s;
 }
 
-.service::after{
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-        linear-gradient(
-            180deg,
-            rgba(4,13,31,.10),
-            rgba(4,13,31,.95)
-        );
+.service:after{
+content:"";
+position:absolute;
+inset:0;
+background:
+linear-gradient(
+180deg,
+rgba(3,11,29,.08),
+rgba(3,11,29,.96)
+);
 }
 
 .service:hover .service-image{
-    transform:scale(1.07);
-
-    opacity:.48;
+transform:scale(1.06);
+opacity:.55;
 }
 
 .service-content{
-    position:absolute;
-
-    z-index:2;
-
-    left:24px;
-    right:24px;
-    bottom:24px;
+position:absolute;
+z-index:2;
+left:25px;
+right:25px;
+bottom:25px;
 }
 
 .service-number{
-    color:var(--gold);
-
-    font-size:.67rem;
-
-    letter-spacing:.17em;
+font-size:.65rem;
+color:var(--gold);
+letter-spacing:.18em;
 }
 
 .service h3{
-    margin:8px 0;
-
-    font-size:1.85rem;
+margin:8px 0;
 }
 
 .service p{
-    font-size:.82rem;
+font-size:.83rem;
+color:#c7d0dc;
 }
 
 
-/* =====================================================
-   GRANDE IMAGE FILIGRANE
-===================================================== */
+/* VISUAL */
 
 .visual{
-    min-height:570px;
-
-    display:flex;
-
-    align-items:center;
-
-    background:var(--night);
+min-height:560px;
+display:flex;
+align-items:center;
+background:#031127;
 }
 
 .visual-image{
-    position:absolute;
-
-    inset:0;
-
-    width:100%;
-    height:100%;
-
-    object-fit:cover;
-
-    object-position:center;
-
-    opacity:.38;
+opacity:.3;
 }
 
 .visual-overlay{
-    position:absolute;
-
-    inset:0;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(3,12,31,.97),
-            rgba(3,12,31,.52),
-            rgba(3,12,31,.78)
-        );
+position:absolute;
+inset:0;
+background:
+linear-gradient(
+90deg,
+rgba(3,12,31,.97),
+rgba(3,12,31,.55),
+rgba(3,12,31,.8)
+);
 }
 
 .visual-content{
-    position:relative;
-
-    z-index:2;
-
-    max-width:760px;
-}
-
-.visual-content h2{
-    font-size:clamp(3rem,6vw,5.2rem);
+position:relative;
+z-index:2;
+max-width:760px;
 }
 
 .visual-content p{
-    max-width:620px;
-
-    margin:22px 0 30px;
+margin:20px 0 30px;
+max-width:630px;
 }
 
 
-/* =====================================================
-   POURQUOI DJOMIHON
-===================================================== */
+/* SERVICES */
+
+.extended{
+background:#061832;
+}
+
+.extended-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+}
+
+.extended-card{
+padding:30px;
+border:1px solid var(--line);
+background:rgba(255,255,255,.025);
+border-radius:16px;
+}
+
+.extended-card h3{
+font-size:1.75rem;
+margin-bottom:10px;
+}
+
+.extended-card p{
+font-size:.84rem;
+}
+
+.extended-card strong{
+color:var(--gold2);
+}
+
+.notice{
+margin-top:28px;
+padding:18px 20px;
+border-left:2px solid var(--gold);
+background:rgba(202,168,102,.05);
+font-size:.8rem;
+color:#bfc9d5;
+}
+
+
+/* EXPERIENCE */
 
 .why{
-    background:#071a34;
+background:var(--night2);
 }
 
 .why-grid{
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:18px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
 }
 
 .why-card{
-    padding:30px 24px;
-
-    background:rgba(255,255,255,.025);
-
-    border-top:1px solid var(--gold);
+padding:28px 22px;
+background:rgba(255,255,255,.025);
+border-top:1px solid var(--gold);
 }
 
 .why-symbol{
-    color:var(--gold);
-
-    font-size:1.45rem;
-
-    margin-bottom:14px;
+color:var(--gold);
+font-size:1.4rem;
 }
 
 .why-card h3{
-    margin-bottom:10px;
-
-    font-size:1.7rem;
+font-size:1.7rem;
+margin:8px 0;
 }
 
 .why-card p{
-    font-size:.83rem;
+font-size:.82rem;
 }
 
 
-/* =====================================================
-   TEMOIGNAGES
-===================================================== */
+/* TESTIMONIALS */
 
 .testimonials{
-    background:var(--night2);
-}
-
-.testimonials-intro{
-    max-width:700px;
-
-    margin-top:17px;
+background:#061329;
 }
 
 .testimonials-grid{
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:20px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
 }
 
 .testimonial{
-    position:relative;
-
-    padding:32px 28px;
-
-    border:1px solid var(--line);
-
-    border-radius:18px;
-
-    background:rgba(255,255,255,.035);
-}
-
-.testimonial::before{
-    content:"“";
-
-    position:absolute;
-
-    top:3px;
-    right:20px;
-
-    color:rgba(202,168,102,.18);
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:5rem;
+padding:30px 26px;
+border:1px solid var(--line);
+border-radius:18px;
+background:rgba(255,255,255,.035);
 }
 
 .testimonial p{
-    color:#dfe4eb;
-
-    font-size:.88rem;
+color:#dfe4eb;
+font-size:.87rem;
 }
 
 .author{
-    margin-top:20px;
-
-    color:var(--gold-light);
-
-    font-size:.72rem;
-
-    letter-spacing:.1em;
+margin-top:18px;
+color:var(--gold2);
+font-size:.7rem;
+letter-spacing:.1em;
 }
 
 
-/* =====================================================
-   PROCESSUS
-===================================================== */
+/* PROCESS */
 
 .process{
-    background:#061832;
+background:#061832;
 }
 
 .steps{
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:20px;
-
-    margin-top:45px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+margin-top:45px;
 }
 
 .step{
-    padding:32px;
-
-    border-top:1px solid var(--gold);
-
-    background:rgba(255,255,255,.025);
+padding:30px;
+border-top:1px solid var(--gold);
+background:rgba(255,255,255,.025);
 }
 
 .step-number{
-    color:var(--gold);
-
-    font-size:.7rem;
-
-    letter-spacing:.18em;
+color:var(--gold);
+font-size:.68rem;
+letter-spacing:.18em;
 }
 
 .step h3{
-    margin:12px 0;
-
-    font-size:2rem;
+margin:12px 0;
 }
 
 .step p{
-    font-size:.85rem;
+font-size:.84rem;
 }
 
 
-/* =====================================================
-   HORAIRES
-===================================================== */
+/* HOURS */
 
 .hours{
-    background:var(--night2);
+background:var(--night2);
 }
 
 .hours-box{
-    max-width:850px;
-
-    margin:auto;
-
-    padding:55px 35px;
-
-    text-align:center;
-
-    border:1px solid var(--line);
-
-    border-radius:24px;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(202,168,102,.07),
-            rgba(255,255,255,.02)
-        );
-}
-
-.hours-box h2{
-    max-width:700px;
-
-    margin:auto;
+max-width:850px;
+margin:auto;
+padding:55px 30px;
+text-align:center;
+border:1px solid var(--line);
+border-radius:24px;
+background:
+linear-gradient(
+135deg,
+rgba(202,168,102,.07),
+rgba(255,255,255,.02)
+);
 }
 
 .hours-number{
-    margin:20px 0 3px;
-
-    color:var(--gold-light);
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:2.8rem;
+margin:20px 0 3px;
+color:var(--gold2);
+font:2.8rem "Cormorant Garamond",serif;
 }
 
 .hours-days{
-    margin-bottom:28px;
-
-    font-size:.78rem;
+margin-bottom:28px;
+font-size:.78rem;
 }
 
 
-/* =====================================================
-   FAQ
-===================================================== */
+/* FAQ */
 
 .faq{
-    background:#061329;
+background:#061329;
 }
 
 .faq-list{
-    max-width:850px;
-
-    margin:45px auto 0;
+max-width:850px;
+margin:45px auto 0;
 }
 
 details{
-    padding:20px 0;
-
-    border-bottom:1px solid var(--line);
+padding:20px 0;
+border-bottom:1px solid var(--line);
 }
 
 summary{
-    cursor:pointer;
-
-    list-style:none;
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:1.45rem;
+cursor:pointer;
+list-style:none;
+font:1.45rem "Cormorant Garamond",serif;
 }
 
 summary::-webkit-details-marker{
-    display:none;
+display:none;
 }
 
 details p{
-    padding-top:14px;
-
-    font-size:.87rem;
+padding-top:14px;
+font-size:.86rem;
 }
 
 
-/* =====================================================
-   CTA
-===================================================== */
+/* CTA */
 
 .cta{
-    min-height:500px;
-
-    display:grid;
-
-    place-items:center;
-
-    text-align:center;
-
-    background:#061832;
+min-height:500px;
+display:grid;
+place-items:center;
+text-align:center;
+background:#061832;
 }
 
 .cta-image{
-    position:absolute;
-
-    inset:0;
-
-    width:100%;
-    height:100%;
-
-    object-fit:cover;
-
-    opacity:.27;
+opacity:.25;
 }
 
 .cta-overlay{
-    position:absolute;
-
-    inset:0;
-
-    background:rgba(3,11,29,.70);
+position:absolute;
+inset:0;
+background:rgba(3,11,29,.72);
 }
 
 .cta-content{
-    position:relative;
-
-    z-index:2;
-
-    max-width:760px;
+position:relative;
+z-index:2;
+max-width:760px;
 }
 
 .cta-content p{
-    max-width:620px;
-
-    margin:20px auto 30px;
+max-width:620px;
+margin:20px auto 30px;
 }
 
 
-/* =====================================================
-   CONTACT
-===================================================== */
+/* CONTACT */
 
 .contact{
-    background:var(--night);
-}
-
-.contact-grid{
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:75px;
-
-    align-items:start;
+background:var(--night);
 }
 
 .contact-card{
-    padding:32px;
-
-    border:1px solid var(--line);
-
-    border-radius:22px;
-
-    background:rgba(255,255,255,.035);
+padding:32px;
+border:1px solid var(--line);
+border-radius:22px;
+background:rgba(255,255,255,.035);
 }
 
 .contact-item{
-    padding:19px 0;
-
-    border-bottom:1px solid var(--line);
+padding:18px 0;
+border-bottom:1px solid var(--line);
 }
 
 .contact-item:last-child{
-    border-bottom:none;
+border:0;
 }
 
 .contact-label{
-    display:block;
-
-    color:var(--gold);
-
-    font-size:.67rem;
-
-    letter-spacing:.16em;
-
-    text-transform:uppercase;
+display:block;
+color:var(--gold);
+font-size:.66rem;
+letter-spacing:.16em;
+text-transform:uppercase;
 }
 
 .contact-value{
-    display:block;
-
-    margin-top:5px;
-
-    color:white;
-
-    font-size:1rem;
+display:block;
+margin-top:5px;
+color:white;
 }
 
 .contact-value:hover{
-    color:var(--gold-light);
+color:var(--gold2);
 }
 
 .contact-note{
-    margin-top:18px;
-
-    font-size:.8rem;
+font-size:.78rem;
 }
 
 
-/* =====================================================
-   FOOTER
-===================================================== */
+/* FOOTER */
 
 footer{
-    background:#020916;
-
-    border-top:1px solid var(--line);
-
-    padding:30px 0;
+background:#020916;
+border-top:1px solid var(--line);
+padding:30px 0;
 }
 
 .footer{
-    display:flex;
-
-    align-items:center;
-    justify-content:space-between;
-
-    gap:20px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
 }
 
-footer p{
-    font-size:.72rem;
+.footer p,
+.footer a{
+font-size:.7rem;
 }
 
 .footer-links{
-    display:flex;
-
-    gap:20px;
-
-    color:#aeb8c7;
-
-    font-size:.72rem;
+display:flex;
+gap:20px;
+color:#aeb8c7;
 }
 
 
-/* =====================================================
-   WHATSAPP FLOTTANT
-===================================================== */
+/* WHATSAPP */
 
 .whatsapp-float{
-    position:fixed;
-
-    right:20px;
-    bottom:20px;
-
-    z-index:2000;
-
-    width:58px;
-    height:58px;
-
-    display:grid;
-
-    place-items:center;
-
-    border-radius:50%;
-
-    background:#25D366;
-
-    color:white;
-
-    font-size:1.25rem;
-    font-weight:700;
-
-    box-shadow:0 12px 35px rgba(0,0,0,.45);
-
-    transition:.25s;
-}
-
-.whatsapp-float:hover{
-    transform:scale(1.08);
+position:fixed;
+right:20px;
+bottom:20px;
+z-index:2000;
+width:58px;
+height:58px;
+border-radius:50%;
+display:grid;
+place-items:center;
+background:#25d366;
+color:white;
+font-weight:800;
+box-shadow:0 12px 35px rgba(0,0,0,.45);
 }
 
 
-/* =====================================================
-   MOBILE
-===================================================== */
+/* TABLET */
 
 @media(max-width:1000px){
 
-    .nav-links{
-        position:absolute;
+.nav-links{
+position:absolute;
+top:78px;
+left:4%;
+right:4%;
+display:none;
+flex-direction:column;
+padding:20px;
+background:rgba(3,11,28,.98);
+border:1px solid var(--line);
+border-radius:18px;
+}
 
-        top:78px;
-        left:4%;
-        right:4%;
+.nav-links.open{
+display:flex;
+}
 
-        display:none;
+.menu{
+display:block;
+}
 
-        flex-direction:column;
+.nav-cta{
+display:none;
+}
 
-        padding:20px;
+.trust-grid{
+grid-template-columns:repeat(2,1fr);
+}
 
-        background:rgba(3,11,28,.98);
+.trust-item:nth-child(2){
+border-right:0;
+}
 
-        border:1px solid var(--line);
+.intro-grid,
+.about-grid,
+.contact-grid{
+grid-template-columns:1fr;
+gap:45px;
+}
 
-        border-radius:18px;
-    }
+.service-grid{
+grid-template-columns:1fr 1fr;
+}
 
-    .nav-links.open{
-        display:flex;
-    }
+.why-grid{
+grid-template-columns:1fr 1fr;
+}
 
-    .menu{
-        display:block;
-    }
+.testimonials-grid,
+.steps{
+grid-template-columns:1fr;
+}
 
-    .nav-cta{
-        display:none;
-    }
-
-    .trust-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .trust-item:nth-child(2){
-        border-right:none;
-    }
-
-    .intro-grid,
-    .about-grid,
-    .contact-grid{
-        grid-template-columns:1fr;
-        gap:45px;
-    }
-
-    .services-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .why-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .testimonials-grid{
-        grid-template-columns:1fr;
-    }
-
-    .steps{
-        grid-template-columns:1fr;
-    }
 }
 
 
+/* MOBILE */
+
 @media(max-width:600px){
 
-    .container{
-        width:92%;
-    }
+.section{
+padding:80px 0;
+}
 
-    .section{
-        padding:80px 0;
-    }
+.hero-image{
+opacity:.55;
+}
 
-    .hero{
-        min-height:100svh;
-    }
+.hero-overlay{
+background:
+linear-gradient(
+90deg,
+rgba(3,11,29,.95),
+rgba(3,11,29,.7)
+);
+}
 
-    .hero-image{
-        object-position:center;
-        opacity:.57;
-    }
+.hero-content{
+padding-top:130px;
+}
 
-    .hero-overlay{
-        background:
-            linear-gradient(
-                90deg,
-                rgba(3,11,29,.95),
-                rgba(3,11,29,.68)
-            );
-    }
+.hero h1{
+font-size:4rem;
+}
 
-    .hero-content{
-        padding-top:130px;
-    }
+.hero-buttons{
+flex-direction:column;
+}
 
-    .hero h1{
-        font-size:4rem;
-    }
+.hero-buttons .btn{
+width:100%;
+}
 
-    .hero-description{
-        font-size:.94rem;
-    }
+.service-grid,
+.extended-grid,
+.why-grid{
+grid-template-columns:1fr;
+}
 
-    .hero-buttons{
-        flex-direction:column;
-    }
+.about-quote{
+font-size:1.7rem;
+}
 
-    .hero-buttons .btn{
-        width:100%;
-    }
+.hours-box{
+padding:40px 20px;
+}
 
-    .trust-grid{
-        grid-template-columns:1fr 1fr;
-    }
+.hours-number{
+font-size:2.35rem;
+}
 
-    .trust-item{
-        padding:20px 8px;
-    }
+.footer{
+flex-direction:column;
+align-items:flex-start;
+}
 
-    .trust-item strong{
-        font-size:1.15rem;
-    }
-
-    .services-grid{
-        grid-template-columns:1fr;
-    }
-
-    .why-grid{
-        grid-template-columns:1fr;
-    }
-
-    .about-quote{
-        font-size:1.7rem;
-    }
-
-    .hours-box{
-        padding:38px 20px;
-    }
-
-    .hours-number{
-        font-size:2.35rem;
-    }
-
-    .footer{
-        flex-direction:column;
-
-        align-items:flex-start;
-    }
-
-    .whatsapp-float{
-        width:54px;
-        height:54px;
-
-        right:15px;
-        bottom:15px;
-    }
+.whatsapp-float{
+right:15px;
+bottom:15px;
+width:54px;
+height:54px;
+}
 
 }
 
 </style>
-
 </head>
 
-
 <body>
-
-
-<!-- =====================================================
-     HEADER
-===================================================== -->
 
 <header>
 
 <div class="container nav">
 
-
 <a href="#accueil" class="logo">
 
-<span class="logo-circle">
-D
-</span>
+<span class="logo-circle">D</span>
 
 <span class="logo-text">
-
 <small>MÉDIUM VOYANT</small>
-
 <strong>DJOMIHON</strong>
-
 </span>
 
 </a>
 
-
 <nav class="nav-links" id="navLinks">
 
 <a href="#accueil">Accueil</a>
-
 <a href="#apropos">À propos</a>
-
 <a href="#consultations">Consultations</a>
-
+<a href="#services">Services</a>
 <a href="#temoignages">Témoignages</a>
-
 <a href="#faq">FAQ</a>
-
 <a href="#contact">Contact</a>
 
 </nav>
-
 
 <a
 class="btn btn-gold nav-cta"
 href="https://wa.me/2290169838270?text=Bonjour%20M%C3%A9dium%20Voyant%20DJOMIHON%2C%20je%20souhaite%20prendre%20rendez-vous."
 target="_blank"
 rel="noopener noreferrer">
-
 Prendre rendez-vous
-
 </a>
 
-
-<button
-class="menu"
-id="menuBtn"
-aria-label="Ouvrir le menu">
-
-☰
-
-</button>
+<button class="menu" id="menuBtn" aria-label="Menu">☰</button>
 
 </div>
 
 </header>
 
 
+<main>
 
-<!-- =====================================================
-     HERO
-===================================================== -->
+
+<!-- HERO -->
 
 <section class="hero" id="accueil">
 
-
 <img
 class="hero-image"
-src="images/djomihon-consultation.jpeg"
-alt=""
+src="images/consultation-spirituelle.jpeg"
+alt="Consultation spirituelle"
 fetchpriority="high">
-
 
 <div class="hero-overlay"></div>
 
-
 <div class="container hero-content">
 
-
 <div class="eyebrow">
-
 INTUITION • ÉCOUTE • GUIDANCE
-
 </div>
 
-
 <h1>
-
 Écouter ce qui
-
 <span>ne se voit pas.</span>
-
 </h1>
 
-
 <p class="hero-description">
-
-Médium Voyant DJOMIHON, un espace d'écoute,
-de guidance et de consultation spirituelle
-dans la discrétion et le respect de votre histoire.
-
+Médium Voyant DJOMIHON vous accueille pour des consultations spirituelles,
+sentimentales et professionnelles dans un cadre discret, respectueux et confidentiel.
 </p>
-
 
 <div class="hero-buttons">
 
-
 <a
-class="btn btn-gold btn-whatsapp"
-href="https://wa.me/2290169838270?text=Bonjour%20M%C3%A9dium%20Voyant%20DJOMIHON%2C%20je%20souhaite%20prendre%20rendez-vous."
+class="btn btn-gold"
+href="https://wa.me/2290169838270?text=Bonjour%20DJOMIHON%2C%20je%20souhaite%20prendre%20rendez-vous."
 target="_blank"
 rel="noopener noreferrer">
-
 Prendre rendez-vous
-
 </a>
 
-
-<a
-class="btn btn-outline"
-href="#consultations">
-
-Découvrir l'univers
-
+<a class="btn btn-outline" href="#consultations">
+Découvrir les consultations
 </a>
-
 
 </div>
 
-
 <p class="hero-info">
-
 Consultations à distance • Tous les jours de 08h00 à 21h00 • Sur rendez-vous
-
 </p>
-
 
 </div>
 
 </section>
 
 
-
-<!-- =====================================================
-     BANDEAU
-===================================================== -->
+<!-- TRUST -->
 
 <section class="trust">
 
 <div class="container trust-grid">
 
-
 <div class="trust-item">
-
 <strong>Écoute</strong>
-
 <span>Personnalisée</span>
-
 </div>
 
-
 <div class="trust-item">
-
 <strong>Discrétion</strong>
-
 <span>Échanges confidentiels</span>
-
 </div>
 
-
 <div class="trust-item">
-
 <strong>À distance</strong>
-
 <span>Depuis votre lieu</span>
-
 </div>
-
 
 <div class="trust-item">
-
 <strong>08h — 21h</strong>
-
 <span>Tous les jours</span>
-
 </div>
-
 
 </div>
 
 </section>
 
 
-
-<!-- =====================================================
-     INTRO
-===================================================== -->
+<!-- INTRO -->
 
 <section class="section intro">
 
 <div class="container intro-grid">
-
 
 <div>
 
@@ -1597,60 +1115,41 @@ Parfois, il suffit d'écouter.
 
 </div>
 
-
 <div class="intro-text">
 
 <p>
-
-Certaines périodes de la vie soulèvent des questions
-que l'on garde pour soi.
-
-La consultation offre un moment pour poser vos
-préoccupations, prendre du recul et explorer
-votre situation avec attention.
-
+Certaines périodes de la vie soulèvent des questions que l'on garde pour soi.
+La consultation offre un moment pour poser vos préoccupations, prendre du recul
+et explorer votre situation avec attention.
 </p>
 
-
 <p>
-
 Chaque échange commence par l'écoute.
-Votre histoire est personnelle et mérite
-un échange qui lui soit propre.
-
+Votre histoire est personnelle et mérite un échange qui lui soit propre.
 </p>
 
 </div>
-
 
 </div>
 
 </section>
 
 
-
-<!-- =====================================================
-     A PROPOS
-===================================================== -->
+<!-- À PROPOS -->
 
 <section class="section about" id="apropos">
 
-
 <img
 class="about-image"
-src="images/djomihon-consultation.jpeg"
-alt=""
+src="images/consultation-spirituelle.jpeg"
+alt="Ambiance de consultation"
 loading="lazy">
-
 
 <div class="about-overlay"></div>
 
-
 <div class="container about-container">
 
-
 <div class="about-grid">
-
 
 <div class="about-text">
 
@@ -1658,29 +1157,19 @@ loading="lazy">
 À PROPOS DE DJOMIHON
 </div>
 
-
 <h2>
 Une approche fondée sur l'écoute.
 </h2>
 
-
 <p>
-
-DJOMIHON vous reçoit dans un cadre discret
-pour échanger autour de vos préoccupations
-personnelles, sentimentales ou spirituelles.
-
+DJOMIHON vous reçoit dans un cadre discret pour échanger autour
+de vos préoccupations personnelles, sentimentales ou spirituelles.
 </p>
 
-
 <p>
-
-La consultation est avant tout un moment
-d'écoute, de réflexion et de guidance,
-dans le respect de votre libre arbitre.
-
+La consultation est avant tout un moment d'écoute, de réflexion
+et de guidance, dans le respect de votre libre arbitre.
 </p>
-
 
 <div class="signature">
 DJOMIHON
@@ -1688,14 +1177,12 @@ DJOMIHON
 
 </div>
 
-
 <div class="about-quote">
 
-« Prendre le temps d'écouter ce qui vous habite
-peut déjà ouvrir un autre regard sur votre chemin. »
+« Prendre le temps d'écouter ce qui vous habite peut déjà ouvrir
+un autre regard sur votre chemin. »
 
 </div>
-
 
 </div>
 
@@ -1704,16 +1191,11 @@ peut déjà ouvrir un autre regard sur votre chemin. »
 </section>
 
 
-
-<!-- =====================================================
-     CONSULTATIONS
-===================================================== -->
+<!-- CONSULTATIONS -->
 
 <section class="section consultations" id="consultations">
 
-
 <div class="container">
-
 
 <div class="section-heading">
 
@@ -1721,55 +1203,44 @@ peut déjà ouvrir un autre regard sur votre chemin. »
 CONSULTATIONS
 </div>
 
-
 <h2>
-Des domaines pour vous accompagner.
+Des consultations adaptées à vos questions.
 </h2>
 
-
 <p>
-
-Chaque consultation commence par votre demande.
-Choisissez le domaine qui correspond le mieux
-à votre préoccupation.
-
+Trois portes d'entrée pour commencer votre échange avec DJOMIHON.
 </p>
 
 </div>
 
 
-<div class="services-grid">
+<div class="service-grid">
 
 
-<!-- SERVICE 1 -->
+<!-- SPIRITUEL -->
 
 <article class="service">
 
-
 <img
 class="service-image"
-src="images/djomihon-consultation.jpeg"
-alt=""
+src="images/consultation-spirituelle.jpeg"
+alt="Consultation spirituelle"
 loading="lazy">
-
 
 <div class="service-content">
 
 <span class="service-number">
-01 — INTUITION
+01 — SPIRITUEL
 </span>
 
-
 <h3>
-Voyance & lecture intuitive
+Consultation spirituelle
 </h3>
 
-
 <p>
-
-Un échange autour de vos interrogations
-et de votre situation personnelle.
-
+Entendre et comprendre ce qui vous préoccupe, explorer le sens
+que vous donnez à certaines situations et prendre un temps
+de recul sur votre chemin.
 </p>
 
 </div>
@@ -1777,36 +1248,29 @@ et de votre situation personnelle.
 </article>
 
 
-
-<!-- SERVICE 2 -->
+<!-- AMOUR -->
 
 <article class="service">
 
-
 <img
 class="service-image"
-src="images/djomihon-consultation.jpeg"
-alt=""
+src="images/amour.jpeg"
+alt="Consultation sentimentale"
 loading="lazy">
-
 
 <div class="service-content">
 
 <span class="service-number">
-02 — SENTIMENTAL
+02 — AMOUR
 </span>
 
-
 <h3>
-Vie sentimentale
+À propos de l'amour
 </h3>
 
-
 <p>
-
-Un espace pour parler de vos relations,
-de vos questionnements et de votre vie affective.
-
+Tirages de cartes, questions sentimentales, compatibilité et
+réflexion autour de votre destinée amoureuse et de vos relations.
 </p>
 
 </div>
@@ -1814,79 +1278,34 @@ de vos questionnements et de votre vie affective.
 </article>
 
 
-
-<!-- SERVICE 3 -->
+<!-- PROFESSIONNEL -->
 
 <article class="service">
 
-
 <img
 class="service-image"
-src="images/djomihon-consultation.jpeg"
-alt=""
+src="images/sphere-consultation.svg"
+alt="Sphère de consultation professionnelle"
 loading="lazy">
-
 
 <div class="service-content">
 
 <span class="service-number">
-03 — GUIDANCE
+03 — PROFESSIONNEL
 </span>
 
-
 <h3>
-Guidance personnelle
+Consultation professionnelle
 </h3>
 
-
 <p>
-
-Un temps de recul pour examiner votre situation
-et les différentes pistes qui s'offrent à vous.
-
+Échanger autour de votre travail, de vos choix professionnels,
+de vos aspirations et des perspectives que vous souhaitez explorer.
 </p>
 
 </div>
 
 </article>
-
-
-
-<!-- SERVICE 4 -->
-
-<article class="service">
-
-
-<img
-class="service-image"
-src="images/djomihon-consultation.jpeg"
-alt=""
-loading="lazy">
-
-
-<div class="service-content">
-
-<span class="service-number">
-04 — SPIRITUEL
-</span>
-
-
-<h3>
-Questions spirituelles
-</h3>
-
-
-<p>
-
-Une écoute attentive pour vos interrogations
-personnelles et spirituelles.
-
-</p>
-
-</div>
-
-</article>
-
 
 </div>
 
@@ -1895,80 +1314,190 @@ personnelles et spirituelles.
 </section>
 
 
-
-<!-- =====================================================
-     GRANDE IMAGE FILIGRANE
-===================================================== -->
+<!-- VISUAL CTA -->
 
 <section class="section visual">
 
-
 <img
 class="visual-image"
-src="images/djomihon-consultation.jpeg"
-alt=""
+src="images/consultation-spirituelle.jpeg"
+alt="Univers spirituel"
 loading="lazy">
-
 
 <div class="visual-overlay"></div>
 
-
 <div class="container visual-content">
-
 
 <div class="eyebrow">
 VOTRE ESPACE DE CONSULTATION
 </div>
 
-
 <h2>
-Un moment à part,
-loin du bruit.
+Un moment à part, loin du bruit.
 </h2>
 
-
 <p>
-
 Prenez le temps de formuler ce qui vous préoccupe.
-Le premier échange se fait simplement avec DJOMIHON,
-directement sur WhatsApp.
-
+Le premier échange se fait simplement avec DJOMIHON par WhatsApp.
 </p>
 
-
 <a
-class="btn btn-gold btn-whatsapp"
+class="btn btn-gold"
 href="https://wa.me/2290169838270?text=Bonjour%20DJOMIHON%2C%20je%20souhaite%20%C3%A9changer%20au%20sujet%20d%27une%20consultation."
 target="_blank"
 rel="noopener noreferrer">
-
 Échanger sur WhatsApp
-
 </a>
-
 
 </div>
 
 </section>
 
 
+<!-- SERVICES PLUS POUSSÉS -->
 
-<!-- =====================================================
-     POURQUOI DJOMIHON
-===================================================== -->
-
-<section class="section why">
-
+<section class="section extended" id="services">
 
 <div class="container">
 
+<div class="section-heading">
+
+<div class="eyebrow">
+SERVICES PLUS POUSSÉS
+</div>
+
+<h2>
+Des accompagnements spirituels complémentaires.
+</h2>
+
+<p>
+Ces prestations sont proposées dans une démarche spirituelle et symbolique.
+Aucun résultat ne peut être garanti et chacun reste libre de ses décisions.
+</p>
+
+</div>
+
+
+<div class="extended-grid">
+
+
+<article class="extended-card">
+
+<h3>
+Retour d'affection
+</h3>
+
+<p>
+Accompagnement autour des questions affectives et rituels traditionnels
+présentés comme une démarche symbolique pour les personnes souhaitant
+travailler sur une relation.
+</p>
+
+</article>
+
+
+<article class="extended-card">
+
+<h3>
+Déblocage & purification
+</h3>
+
+<p>
+Rituels spirituels de purification et de recentrage destinés, selon
+la tradition pratiquée, à accompagner une période ressentie comme
+difficile ou bloquée.
+</p>
+
+</article>
+
+
+<article class="extended-card">
+
+<h3>
+Attirance & chance
+</h3>
+
+<p>
+Rituels symboliques autour de la chance, de l'ouverture aux opportunités,
+de la confiance et des objectifs personnels.
+</p>
+
+</article>
+
+
+<article class="extended-card">
+
+<h3>
+Initiation maçonnique
+</h3>
+
+<p>
+Présentation d'une démarche d'initiation symbolique et spirituelle
+pour les personnes intéressées par cet univers.
+Les modalités sont expliquées lors du premier échange.
+</p>
+
+</article>
+
+
+<article class="extended-card">
+
+<h3>
+Prospérité & réussite
+</h3>
+
+<p>
+Accompagnement spirituel autour des objectifs de prospérité,
+de réussite personnelle et professionnelle, sans promesse de richesse
+ou de résultat financier.
+</p>
+
+</article>
+
+
+<article class="extended-card">
+
+<h3>
+Préoccupations liées au bien-être
+</h3>
+
+<p>
+Échange et accompagnement spirituel autour de vos préoccupations
+personnelles liées au bien-être. Cette démarche ne remplace pas
+un avis, un diagnostic ou un traitement médical.
+</p>
+
+</article>
+
+
+</div>
+
+
+<div class="notice">
+
+<strong>Important :</strong>
+les consultations spirituelles ne remplacent pas les professionnels
+compétents en matière médicale, juridique, financière ou psychologique.
+Pour toute situation urgente ou grave, adressez-vous au professionnel approprié.
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EXPÉRIENCE -->
+
+<section class="section why">
+
+<div class="container">
 
 <div class="section-heading">
 
 <div class="eyebrow">
 L'EXPÉRIENCE DJOMIHON
 </div>
-
 
 <h2>
 Un cadre pensé pour vous.
@@ -1982,82 +1511,59 @@ Un cadre pensé pour vous.
 
 <div class="why-card">
 
-<div class="why-symbol">
-◈
-</div>
+<div class="why-symbol">◈</div>
 
 <h3>
 Écoute
 </h3>
 
 <p>
-
-Votre demande est accueillie avec attention
-avant toute consultation.
-
+Votre demande est accueillie avec attention avant toute consultation.
 </p>
 
 </div>
 
 
-
 <div class="why-card">
 
-<div class="why-symbol">
-◌
-</div>
+<div class="why-symbol">◌</div>
 
 <h3>
 Discrétion
 </h3>
 
 <p>
-
-Les échanges se déroulent dans un cadre
-respectueux et discret.
-
+Les échanges se déroulent dans un cadre respectueux et discret.
 </p>
 
 </div>
 
 
-
 <div class="why-card">
 
-<div class="why-symbol">
-✦
-</div>
+<div class="why-symbol">✦</div>
 
 <h3>
 À distance
 </h3>
 
 <p>
-
-Vous pouvez commencer votre échange
-depuis votre téléphone.
-
+Vous pouvez commencer votre échange depuis votre téléphone.
 </p>
 
 </div>
 
 
-
 <div class="why-card">
 
-<div class="why-symbol">
-☾
-</div>
+<div class="why-symbol">☾</div>
 
 <h3>
 Disponibilité
 </h3>
 
 <p>
-
-Prise de contact possible tous les jours
-de 08h00 à 21h00.
-
+Prise de contact possible tous les jours de 08h00 à 21h00.
 </p>
 
 </div>
@@ -2070,16 +1576,11 @@ de 08h00 à 21h00.
 </section>
 
 
-
-<!-- =====================================================
-     TEMOIGNAGES
-===================================================== -->
+<!-- TÉMOIGNAGES -->
 
 <section class="section testimonials" id="temoignages">
 
-
 <div class="container">
-
 
 <div class="section-heading">
 
@@ -2087,18 +1588,12 @@ de 08h00 à 21h00.
 TÉMOIGNAGES
 </div>
 
-
 <h2>
 Ils ont fait confiance à DJOMIHON.
 </h2>
 
-
-<p class="testimonials-intro">
-
-Quelques exemples de présentation.
-Ces textes sont à remplacer par les véritables
-témoignages de vos clients.
-
+<p>
+Exemples de mise en page. À remplacer par les témoignages réels de vos clients.
 </p>
 
 </div>
@@ -2110,14 +1605,9 @@ témoignages de vos clients.
 <article class="testimonial">
 
 <p>
-
-« J'ai apprécié la qualité de l'écoute
-et la possibilité de parler librement de ce
-qui me préoccupait. L'échange était calme
-et respectueux. »
-
+« J'ai apprécié la qualité de l'écoute et la possibilité de parler
+librement de ce qui me préoccupait. L'échange était calme et respectueux. »
 </p>
-
 
 <div class="author">
 — S. • Cotonou
@@ -2126,18 +1616,13 @@ et respectueux. »
 </article>
 
 
-
 <article class="testimonial">
 
 <p>
-
-« Une consultation qui m'a permis de prendre
-du recul sur ma situation. J'ai particulièrement
-apprécié la discrétion et le temps consacré
+« Une consultation qui m'a permis de prendre du recul sur ma situation.
+J'ai particulièrement apprécié la discrétion et le temps consacré
 à mes questions. »
-
 </p>
-
 
 <div class="author">
 — M. • Porto-Novo
@@ -2146,17 +1631,12 @@ apprécié la discrétion et le temps consacré
 </article>
 
 
-
 <article class="testimonial">
 
 <p>
-
-« J'ai pu expliquer ma situation sans me sentir
-jugé. L'échange était personnel et attentif.
-Une expérience qui m'a donné matière à réfléchir. »
-
+« J'ai pu expliquer ma situation sans me sentir jugé.
+L'échange était personnel et attentif. »
 </p>
-
 
 <div class="author">
 — A. • Abomey-Calavi
@@ -2172,23 +1652,17 @@ Une expérience qui m'a donné matière à réfléchir. »
 </section>
 
 
+<!-- PROCESSUS -->
 
-<!-- =====================================================
-     PROCESSUS
-===================================================== -->
-
-<section class="section process" id="processus">
-
+<section class="section process">
 
 <div class="container">
-
 
 <div class="section-heading">
 
 <div class="eyebrow">
 COMMENT ÇA MARCHE ?
 </div>
-
 
 <h2>
 Un processus simple et humain.
@@ -2206,21 +1680,15 @@ Un processus simple et humain.
 01 — CONTACT
 </span>
 
-
 <h3>
 Vous écrivez.
 </h3>
 
-
 <p>
-
-Envoyez un message sur WhatsApp
-en expliquant brièvement votre demande.
-
+Envoyez un message sur WhatsApp en expliquant brièvement votre demande.
 </p>
 
 </div>
-
 
 
 <div class="step">
@@ -2229,21 +1697,15 @@ en expliquant brièvement votre demande.
 02 — ÉCHANGE
 </span>
 
-
 <h3>
 Nous échangeons.
 </h3>
 
-
 <p>
-
-Votre demande est précisée afin de préparer
-le cadre de la consultation.
-
+Votre demande est précisée afin de préparer le cadre de la consultation.
 </p>
 
 </div>
-
 
 
 <div class="step">
@@ -2252,17 +1714,12 @@ le cadre de la consultation.
 03 — RENDEZ-VOUS
 </span>
 
-
 <h3>
 Vous consultez.
 </h3>
 
-
 <p>
-
-Le rendez-vous est fixé selon vos disponibilités
-et les modalités convenues.
-
+Le rendez-vous est fixé selon vos disponibilités et les modalités convenues.
 </p>
 
 </div>
@@ -2275,50 +1732,37 @@ et les modalités convenues.
 </section>
 
 
-
-<!-- =====================================================
-     HORAIRES
-===================================================== -->
+<!-- HORAIRES -->
 
 <section class="section hours">
 
-
 <div class="container">
 
-
 <div class="hours-box">
-
 
 <div class="eyebrow">
 DISPONIBILITÉ
 </div>
 
-
 <h2>
 Un échange quand vous en avez besoin.
 </h2>
-
 
 <div class="hours-number">
 08h00 — 21h00
 </div>
 
-
 <p class="hours-days">
 Tous les jours • Sur rendez-vous
 </p>
 
-
 <a
-class="btn btn-gold btn-whatsapp"
+class="btn btn-gold"
 href="https://wa.me/2290169838270?text=Bonjour%20DJOMIHON%2C%20je%20souhaite%20conna%C3%AEtre%20vos%20disponibilit%C3%A9s."
 target="_blank"
 rel="noopener noreferrer">
-
 Vérifier une disponibilité
-
 </a>
-
 
 </div>
 
@@ -2327,23 +1771,17 @@ Vérifier une disponibilité
 </section>
 
 
-
-<!-- =====================================================
-     FAQ
-===================================================== -->
+<!-- FAQ -->
 
 <section class="section faq" id="faq">
 
-
 <div class="container">
-
 
 <div class="section-heading">
 
 <div class="eyebrow">
 FAQ
 </div>
-
 
 <h2>
 Vos questions, nos réponses.
@@ -2362,14 +1800,11 @@ Comment prendre rendez-vous ?
 </summary>
 
 <p>
-
-Utilisez l'un des boutons WhatsApp du site
-pour commencer l'échange avec DJOMIHON.
-
+Utilisez l'un des boutons WhatsApp du site pour commencer
+l'échange avec DJOMIHON.
 </p>
 
 </details>
-
 
 
 <details>
@@ -2379,14 +1814,11 @@ Quels sont les horaires ?
 </summary>
 
 <p>
-
-Les prises de contact sont possibles tous les jours
-de 08h00 à 21h00, sur rendez-vous.
-
+Les prises de contact sont possibles tous les jours de 08h00
+à 21h00, sur rendez-vous.
 </p>
 
 </details>
-
 
 
 <details>
@@ -2396,15 +1828,11 @@ Les consultations peuvent-elles se faire à distance ?
 </summary>
 
 <p>
-
-Oui. Le premier échange peut être effectué
-à distance via WhatsApp. Les modalités sont
-précisées lors de la prise de contact.
-
+Oui. Le premier échange peut être effectué à distance via WhatsApp.
+Les modalités sont précisées lors de la prise de contact.
 </p>
 
 </details>
-
 
 
 <details>
@@ -2414,28 +1842,8 @@ Les échanges sont-ils confidentiels ?
 </summary>
 
 <p>
-
 La discrétion fait partie du cadre proposé.
-Ne transmettez toutefois que les informations
-nécessaires à votre demande.
-
-</p>
-
-</details>
-
-
-
-<details>
-
-<summary>
-Dois-je expliquer toute ma situation dès le premier message ?
-</summary>
-
-<p>
-
-Non. Un bref résumé suffit pour commencer.
-Les détails peuvent être abordés progressivement.
-
+Ne transmettez toutefois que les informations nécessaires à votre demande.
 </p>
 
 </details>
@@ -2448,71 +1856,51 @@ Les détails peuvent être abordés progressivement.
 </section>
 
 
-
-<!-- =====================================================
-     CTA FINAL
-===================================================== -->
+<!-- CTA FINAL -->
 
 <section class="section cta">
 
-
 <img
 class="cta-image"
-src="images/djomihon-consultation.jpeg"
-alt=""
+src="images/amour.jpeg"
+alt="Ambiance spirituelle et sentimentale"
 loading="lazy">
-
 
 <div class="cta-overlay"></div>
 
-
 <div class="cta-content">
-
 
 <div class="eyebrow">
 DJOMIHON
 </div>
 
-
 <h2>
 Votre question mérite d'être posée.
 </h2>
 
-
 <p>
-
 Commencez simplement par un message.
 Votre demande sera accueillie avec attention.
-
 </p>
 
-
 <a
-class="btn btn-gold btn-whatsapp"
+class="btn btn-gold"
 href="https://wa.me/2290169838270?text=Bonjour%20M%C3%A9dium%20Voyant%20DJOMIHON%2C%20je%20viens%20depuis%20votre%20site%20et%20je%20souhaite%20%C3%A9changer."
 target="_blank"
 rel="noopener noreferrer">
-
 Écrire sur WhatsApp
-
 </a>
-
 
 </div>
 
 </section>
 
 
-
-<!-- =====================================================
-     CONTACT
-===================================================== -->
+<!-- CONTACT -->
 
 <section class="section contact" id="contact">
 
-
 <div class="container contact-grid">
-
 
 <div>
 
@@ -2520,22 +1908,18 @@ rel="noopener noreferrer">
 CONTACTEZ DJOMIHON
 </div>
 
-
 <h2>
 Parlons de votre demande.
 </h2>
 
+<p style="margin-top:20px;max-width:600px">
 
-<p style="margin-top:20px;max-width:600px;">
-
-Pour une première prise de contact,
-WhatsApp reste le moyen le plus simple.
-Vous pouvez également écrire par e-mail.
+Pour une première prise de contact, WhatsApp reste le moyen
+le plus simple. Vous pouvez également écrire par e-mail.
 
 </p>
 
 </div>
-
 
 
 <div class="contact-card">
@@ -2546,7 +1930,6 @@ Vous pouvez également écrire par e-mail.
 <span class="contact-label">
 WhatsApp
 </span>
-
 
 <a
 class="contact-value"
@@ -2561,13 +1944,11 @@ rel="noopener noreferrer">
 </div>
 
 
-
 <div class="contact-item">
 
 <span class="contact-label">
 E-mail
 </span>
-
 
 <a
 class="contact-value"
@@ -2580,28 +1961,22 @@ samajestedjomihon@gmail.com
 </div>
 
 
-
 <div class="contact-item">
 
 <span class="contact-label">
 Disponibilité
 </span>
 
-
 <span class="contact-value">
-
 Tous les jours — 08h00 à 21h00
-
 </span>
 
 </div>
 
 
 <p class="contact-note">
-
 Consultations sur rendez-vous.
 Pour commencer, envoyez simplement un message.
-
 </p>
 
 
@@ -2615,97 +1990,61 @@ Pour commencer, envoyez simplement un message.
 </main>
 
 
-
-<!-- =====================================================
-     WHATSAPP FLOTTANT
-===================================================== -->
+<!-- WHATSAPP FLOTTANT -->
 
 <a
 class="whatsapp-float"
 href="https://wa.me/2290169838270?text=Bonjour%20DJOMIHON%2C%20je%20viens%20depuis%20votre%20site."
 target="_blank"
 rel="noopener noreferrer"
-aria-label="Contacter DJOMIHON sur WhatsApp"
-title="Contacter DJOMIHON">
+aria-label="WhatsApp">
 
 W
 
 </a>
 
 
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+<!-- FOOTER -->
 
 <footer>
 
-
 <div class="container footer">
-
 
 <p>
 © 2026 Médium Voyant DJOMIHON — Tous droits réservés.
 </p>
 
-
 <div class="footer-links">
 
-<a href="#accueil">
-Accueil
-</a>
-
-<a href="#apropos">
-À propos
-</a>
-
-<a href="#contact">
-Contact
-</a>
+<a href="#accueil">Accueil</a>
+<a href="#consultations">Consultations</a>
+<a href="#contact">Contact</a>
 
 </div>
-
 
 </div>
 
 </footer>
 
 
-
-<!-- =====================================================
-     JAVASCRIPT MENU MOBILE
-===================================================== -->
-
 <script>
 
-const menuBtn =
-document.getElementById("menuBtn");
+const menuBtn = document.getElementById('menuBtn');
+const navLinks = document.getElementById('navLinks');
 
-const navLinks =
-document.getElementById("navLinks");
-
-
-menuBtn.addEventListener("click",function(){
-
-navLinks.classList.toggle("open");
-
+menuBtn.addEventListener('click', () => {
+navLinks.classList.toggle('open');
 });
 
+document.querySelectorAll('.nav-links a').forEach(a => {
 
-document
-.querySelectorAll(".nav-links a")
-.forEach(function(link){
-
-link.addEventListener("click",function(){
-
-navLinks.classList.remove("open");
-
+a.addEventListener('click', () => {
+navLinks.classList.remove('open');
 });
 
 });
 
 </script>
-
 
 </body>
 </html>
